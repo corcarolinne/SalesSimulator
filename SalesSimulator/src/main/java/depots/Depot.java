@@ -1,9 +1,13 @@
 package depots;
 
 // abstract class
+
+import factory.DepotFactory;
+
 public abstract class Depot {
     
     // commom attributes for all depots
+    int depotNumber;
     int nativeProductStock;
     int externalProductStock1;
     int externalProductStock2;
@@ -11,8 +15,15 @@ public abstract class Depot {
     int deliveryPrice;
     int budget;
     
-    
-    // getters and setters - commom for all depots
+    // commom methods for all depots
+    public int getDepotNumber() {    
+        return depotNumber;
+    }
+
+    public void setDepotNumber(int depotNumber) {    
+        this.depotNumber = depotNumber;
+    }
+
     public int getNativeProductStock() {
         return nativeProductStock;
     }
@@ -59,5 +70,5 @@ public abstract class Depot {
 
     public void setBudget(int budget) {
         this.budget = budget;
-    }
+    }    
 }

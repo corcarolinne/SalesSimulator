@@ -4,34 +4,34 @@ import factory.DepotFactory;
 
 
 public class Client {
-    
-    
+ 
      public static void main(String[] args) {
-         
-         // creating one depot for A
-          Depot depotFromA = DepotFactory.getDepot("A");
-          System.out.println(depotFromA);
           
-          
-         
-//         // creating factory instance
-//        Factory factory = new Factory();
-//                 
-//        // creating first depot list
-//         Depot[] depotsFromA = new Depot[50];
-//         depotsFromA = factory.populateDepots(depotsFromA);
-//         
-//         // creating second depot list
-//         Depot[] depotsFromB = new Depot[50];
-//         depotsFromB = factory.populateDepots(depotsFromB);
-//         
-//         // creating third depot list
-//         //Depot[] depotsFromC = new Depot[50];
-//         
+        // creating depot list for Company A
+        Depot[] depotsFromA = new Depot[50];
+        depotsFromA = populateDepots(depotsFromA, "A");
+        
+         // creating depot list for Company A
+        Depot[] depotsFromB = new Depot[50];
+        depotsFromB = populateDepots(depotsFromB, "B");
+        
+         // creating depot list for Company A
+        Depot[] depotsFromC = new Depot[50];
+        depotsFromC = populateDepots(depotsFromC, "C");
+              
 //         // creating companies
 //         Company A = new Company("A", depotsFromA);
 //         Company B = new Company("B", depotsFromB);
          
          
      }
+
+    private static Depot[] populateDepots(Depot[] depots, String companyName) {
+        
+        for(int i=0; i < depots.length; i++) {
+             depots[i] = DepotFactory.getDepot(i, companyName);
+             System.out.println(depots[i]);
+         }
+         return depots;
+    }
 }
