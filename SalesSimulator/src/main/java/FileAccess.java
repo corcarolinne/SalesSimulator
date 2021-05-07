@@ -34,13 +34,22 @@ public class FileAccess {
         }
     }
     
-    public void writeFile(Depot[] depots) {
+    public void writeFile(Depot[] depotsfromA, Depot[] depotsfromB, Depot[] depotsfromC) {
         try { 
           // create new file
           FileWriter myWriter = new FileWriter("data.txt");
-          // write depots as strings
-          for(int i=0; i < depots.length; i++) {
-            myWriter.write(depots[i].toString());
+          
+          // write depots lists as strings
+          for(int i=0; i < depotsfromA.length; i++) {
+            myWriter.write(depotsfromA[i].toString());
+            myWriter.write("\n");
+          }
+          for(int i=0; i < depotsfromB.length; i++) {
+            myWriter.write(depotsfromB[i].toString());
+            myWriter.write("\n");
+          }
+          for(int i=0; i < depotsfromC.length; i++) {
+            myWriter.write(depotsfromC[i].toString());
             myWriter.write("\n");
           }
           myWriter.close();

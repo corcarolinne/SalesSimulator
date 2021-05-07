@@ -13,16 +13,22 @@ public class Client {
         // creating depot list for Company A
         Depot[] depotsFromA = new Depot[50];
         depotsFromA = populateDepots(depotsFromA, "A");
-        data.writeFile(depotsFromA);
-        data.readFile();
         
          // creating depot list for Company A
         Depot[] depotsFromB = new Depot[50];
-        Depot[] depotsAsStringB = populateDepots(depotsFromB, "B");
+        depotsFromB = populateDepots(depotsFromB, "B");
+        //data.writeFile(depotsFromB);
+        //data.readFile();
         
          // creating depot list for Company A
         Depot[] depotsFromC = new Depot[50];
-        Depot[] depotsAsStringC = populateDepots(depotsFromC, "C");
+        depotsFromC = populateDepots(depotsFromC, "C");
+        //data.writeFile(depotsFromC);
+        //data.readFile();
+        
+        // calling methods to write and read file
+        data.writeFile(depotsFromA, depotsFromB, depotsFromC);
+        data.readFile();
     
      }
      
