@@ -1,3 +1,5 @@
+package singleton;
+
 
 import depots.Depot;
 import java.io.File;

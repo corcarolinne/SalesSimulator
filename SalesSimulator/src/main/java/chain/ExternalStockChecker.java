@@ -1,3 +1,6 @@
+package chain;
+
+import chain.TransactionLink;
 import depots.Depot;
 
 public class ExternalStockChecker implements TransactionLink {

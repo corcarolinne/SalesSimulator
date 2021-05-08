@@ -1,4 +1,11 @@
 
+
+
+import singleton.FileAccess;
+import chain.PriceChecker;
+import chain.ExternalStockChecker;
+import chain.TransactionLink;
+import chain.NativeStockChecker;
 import depots.Depot;
 import factory.DepotFactory;
 import java.util.Arrays;
