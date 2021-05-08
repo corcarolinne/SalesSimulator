@@ -112,11 +112,14 @@ public class Client {
             if(choice2.equals("1")) {
             
                 // call method to read transactions for company A
+                data.readTransactionsForCompany("A");
 
             } else if (choice2.equals("2")) {
                 // call method to read transactions for company B
+                data.readTransactionsForCompany("B");
             } else if (choice2.equals("3")) {
                 // call method to read transactions for company C
+                data.readTransactionsForCompany("C");
             } else {
                 System.out.println("Please enter ");
             }

@@ -80,17 +80,45 @@ public class FileAccess {
             String data = myReader.nextLine();
             if(data.contains("bought")) {
                 System.out.println(data);       
-            }
-            
-          }
+            } 
+          }        
+          myReader.close();
+        } catch (FileNotFoundException e) {
+          System.out.println("An error occurred.");
+          e.printStackTrace();
+        }
+    }
+    
+    public void readTransactionsForCompany(String company) {
+         try {
+          File myObj = new File("data.txt");
+          Scanner myReader = new Scanner(myObj);
           
-//          // loop only thru lines of transactions
-//          for(int i = 6; i < ; ++i) {
-//            String data = myReader.nextLine();
-//            System.out.println(data);
-//          }
-            
-//          
+          if(company.equals("A")){
+                // loop through whole file while there's a line
+            while (myReader.hasNextLine()) {
+              String data = myReader.nextLine();
+              if(data.contains("Depot A")) {
+                  System.out.println(data);       
+              }
+            }
+          } else if(company.equals("B")){
+                // loop through whole file while there's a line
+            while (myReader.hasNextLine()) {
+              String data = myReader.nextLine();
+              if(data.contains("Depot B")) {
+                  System.out.println(data);       
+              }
+            }
+          } else if(company.equals("C")){
+                // loop through whole file while there's a line
+            while (myReader.hasNextLine()) {
+              String data = myReader.nextLine();
+              if(data.contains("Depot C")) {
+                  System.out.println(data);       
+              }
+            }
+          }            
           myReader.close();
         } catch (FileNotFoundException e) {
           System.out.println("An error occurred.");
@@ -121,4 +149,6 @@ public class FileAccess {
       } 
 
    }
+
+    
 }
