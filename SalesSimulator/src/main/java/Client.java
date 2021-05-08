@@ -13,7 +13,9 @@ import java.util.Scanner;
 
 
 public class Client {
- 
+
+    private static TransactionLink t1 = new ExternalStockChecker();;
+    
     public static void main(String[] args) {
         
         FileAccess data = FileAccess.getInstance();
@@ -35,7 +37,7 @@ public class Client {
         //data.readFile();
         
         // initializing the chain of responsability
-        TransactionLink t1 = new ExternalStockChecker();
+        //TransactionLink t1 = new ExternalStockChecker();
         TransactionLink t2 = new NativeStockChecker();
         TransactionLink t3 = new PriceChecker();
 
@@ -43,16 +45,11 @@ public class Client {
         t1.setNextLink(t2);
         t2.setNextLink(t3);
         
+        // calling method to make transactions
+        makeTransactions(depotsFromA, depotsFromB);
+        makeTransactions(depotsFromA, depotsFromC);
+        makeTransactions(depotsFromB, depotsFromC);
         
-        // looping thru buyerDepots
-        for(int i=0; i < depotsFromA.length; i++) {
-          
-            // looping thru seller depot
-            for(int j=0; j < depotsFromB.length; j++) {
-                // starting chain
-                t1.checker(depotsFromA[i], depotsFromB[j]);
-            }
-        }
     }
     
     private static Depot[] populateDepots(Depot[] depots, String companyName) {
@@ -61,6 +58,21 @@ public class Client {
              depots[i] = DepotFactory.getDepot(companyName, i);      
          }
          return depots; 
+         
+    }
+    
+    private static void makeTransactions(Depot[] buyersDepots, Depot[] sellerDepots) {
+        
+        // looping thru buyerDepots
+        for(int i=0; i < buyersDepots.length; i++) {
+          
+            // looping thru seller depot
+            for(int j=0; j < sellerDepots.length; j++) {
+                // starting chain
+                // initializing the chain of responsability
+                t1.checker(buyersDepots[i], sellerDepots[j]);
+            }
+        }
          
     }
     

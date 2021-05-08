@@ -35,8 +35,8 @@ public class PriceChecker implements TransactionLink {
             sellerDepot.setNativeProductStock(sellerDepot.getNativeProductStock() - 1);
             
             // printing
-            String buyer = "Depot A" + buyerDepot.getDepotNumber();
-            String seller = "Depot B" + sellerDepot.getDepotNumber();
+            String buyer = "Depot " + buyerDepot.getCompany() + buyerDepot.getDepotNumber();
+            String seller = "Depot " +  sellerDepot.getCompany() + sellerDepot.getDepotNumber();
             System.out.println(buyer + " bought from " + seller);
 
         // if budget is not enough
