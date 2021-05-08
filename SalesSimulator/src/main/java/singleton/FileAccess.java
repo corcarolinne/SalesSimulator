@@ -150,5 +150,42 @@ public class FileAccess {
 
    }
 
+    public void readDetailsForCompany(String company) {
+        try {
+          File myObj = new File("data.txt");
+          Scanner myReader = new Scanner(myObj);
+          
+          if(company.equals("A")){
+                // loop through whole file while there's a line
+            while (myReader.hasNextLine()) {
+              String data = myReader.nextLine();
+              if(data.contains("company=A")) {
+                  System.out.println(data);       
+              }
+            }
+          } else if(company.equals("B")){
+                // loop through whole file while there's a line
+            while (myReader.hasNextLine()) {
+              String data = myReader.nextLine();
+              if(data.contains("company=B")) {
+                  System.out.println(data);       
+              }
+            }
+          } else if(company.equals("C")){
+                // loop through whole file while there's a line
+            while (myReader.hasNextLine()) {
+              String data = myReader.nextLine();
+              if(data.contains("company=C")) {
+                  System.out.println(data);       
+              }
+            }
+          }            
+          myReader.close();
+        } catch (FileNotFoundException e) {
+          System.out.println("An error occurred.");
+          e.printStackTrace();
+        }
+    }
+
     
 }

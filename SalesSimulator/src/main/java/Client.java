@@ -121,11 +121,33 @@ public class Client {
                 // call method to read transactions for company C
                 data.readTransactionsForCompany("C");
             } else {
-                System.out.println("Please enter ");
+                System.out.println("Please enter only numbers 1, 2 or 3.");
             }
             
         } else if(choice.equals("3")) {
-            // basically same as above
+            // display second menu
+            System.out.println("1 - Show details for Company A");
+            System.out.println("2 - Show details for Company B");
+            System.out.println("3 - Show details for Company C");
+            
+            // read answer
+            Scanner s2 = new Scanner(System.in);
+            String choice2 = s2.nextLine();
+            
+            if(choice2.equals("1")) {
+            
+                // call method to read details for company A
+                data.readDetailsForCompany("A");
+
+            } else if (choice2.equals("2")) {
+                // call method to read details for company B
+                data.readDetailsForCompany("B");
+            } else if (choice2.equals("3")) {
+                // call method to read details for company C
+                data.readDetailsForCompany("C");
+            } else {
+                System.out.println("Please enter only numbers 1, 2 or 3.");
+            }
         }
         
     }
