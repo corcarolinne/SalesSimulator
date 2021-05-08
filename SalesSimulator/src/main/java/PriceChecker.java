@@ -21,14 +21,20 @@ public class PriceChecker implements TransactionLink {
 
         // comparing cost and budget
         if(totalCost <= buyerDepot.getBudget()){
-
-        // printing
-        String buyer = "Company:A: Depot:" + buyerDepot.getDepotNumber();
-        String seller = "Company:B Depot:" + sellerDepot.getDepotNumber();
-        System.out.println(buyer + " bought from " + seller);
-
-        // go to next link
-        //nextLink.checker(buyerDepot, sellerDepot);
+            
+            // subtracting total cost from buyer's budget
+            buyerDepot.setBudget(buyerDepot.getBudget() - totalCost);
+            
+            // adding depot bought to buyer's external stock
+            buyerDepot.setExternalProductStock1(buyerDepot.getExternalProductStock1() + 1);
+            
+            // subtracting native product stock from seller's stock
+            sellerDepot.setNativeProductStock(sellerDepot.getNativeProductStock() - 1);
+            
+            // printing
+            String buyer = "Depot A" + buyerDepot.getDepotNumber();
+            String seller = "Depot B" + sellerDepot.getDepotNumber();
+            System.out.println(buyer + " bought from " + seller);
 
         // if budget is not enough
         } else {

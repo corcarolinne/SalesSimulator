@@ -13,13 +13,13 @@ public class ExternalStockChecker implements TransactionLink {
     public void checker(Depot buyerDepot, Depot sellerDepot) {
 
         if(buyerDepot.getExternalProductStock1() <= 40){
-           System.out.println(buyerDepot.getDepotNumber()+ " external stock validated");
+           // System.out.println("Depot " + buyerDepot.getCompany() + buyerDepot.getDepotNumber() + " external stock validated");
            // set next link to receive same depot
            // next link will check native depot from seller
            nextLink.checker(buyerDepot, sellerDepot);       
         }
         else {
-            System.out.println("ext stock validated");
+            System.out.println("Not enough External Stock space on Buyers. Purchased not authorized.");
         }
         
     }

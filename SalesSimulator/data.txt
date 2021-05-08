@@ -1,6 +1,6 @@
-Depot{company=A, depotNumber=0, nativeProductStock=18, externalProductStock1=20, externalProductStock2=35, productPrice=7, deliveryPrice=4, budget=87}
-Depot{company=A, depotNumber=1, nativeProductStock=16, externalProductStock1=29, externalProductStock2=3, productPrice=8, deliveryPrice=4, budget=75}
-Depot{company=B, depotNumber=0, nativeProductStock=45, externalProductStock1=5, externalProductStock2=6, productPrice=7, deliveryPrice=3, budget=88}
-Depot{company=B, depotNumber=1, nativeProductStock=26, externalProductStock1=38, externalProductStock2=40, productPrice=5, deliveryPrice=5, budget=72}
-Depot{company=C, depotNumber=0, nativeProductStock=45, externalProductStock1=4, externalProductStock2=23, productPrice=3, deliveryPrice=5, budget=74}
-Depot{company=C, depotNumber=1, nativeProductStock=43, externalProductStock1=30, externalProductStock2=6, productPrice=8, deliveryPrice=6, budget=82}
+Depot{company=A, depotNumber=0, nativeProductStock=33, externalProductStock1=8, externalProductStock2=23, productPrice=9, deliveryPrice=3, budget=51}
+Depot{company=A, depotNumber=1, nativeProductStock=17, externalProductStock1=40, externalProductStock2=5, productPrice=2, deliveryPrice=7, budget=74}
+Depot{company=B, depotNumber=0, nativeProductStock=35, externalProductStock1=39, externalProductStock2=21, productPrice=8, deliveryPrice=7, budget=98}
+Depot{company=B, depotNumber=1, nativeProductStock=44, externalProductStock1=9, externalProductStock2=22, productPrice=4, deliveryPrice=7, budget=80}
+Depot{company=C, depotNumber=0, nativeProductStock=34, externalProductStock1=11, externalProductStock2=27, productPrice=10, deliveryPrice=8, budget=82}
+Depot{company=C, depotNumber=1, nativeProductStock=26, externalProductStock1=37, externalProductStock2=9, productPrice=9, deliveryPrice=7, budget=97}

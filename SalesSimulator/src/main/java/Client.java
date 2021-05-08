@@ -35,9 +35,6 @@ public class Client {
         // set the chain of responsibility
         t1.setNextLink(t2);
         t2.setNextLink(t3);
-        //t3.setNextLink(t2);
-        
-        
         
         
         // looping thru buyerDepots
@@ -59,17 +56,5 @@ public class Client {
          return depots; 
          
     }
-     
-//     private static void checkExternalProductStock(Depot[] buyers) {
-//        
-//        for(int i=0; i < buyers.length; i++) {
-//             if(buyers[i].getExternalProductStock1() <= 40){
-//                 checkBuyerNativeStock(Depot[]);
-//             }
-//                 
-//        }
-//         
-//    }
-
     
 }

@@ -14,13 +14,12 @@ public class NativeStockChecker implements TransactionLink {
     public void checker(Depot buyerDepot, Depot sellerDepot) {
 
         if(sellerDepot.getNativeProductStock() >= 15){
-           System.out.println(sellerDepot.getDepotNumber() + " native stock validated");
-           // set next link to receive same depot
+           // System.out.println("Depot " + sellerDepot.getCompany() + sellerDepot.getDepotNumber() + " native stock validated");
            // next link will check native depot from seller
            nextLink.checker(buyerDepot, sellerDepot);       
         }
         else {
-            System.out.println("invalid nat stock");
+            System.out.println("Not enough Native Stock on Seller. Purchased not authorized.");
         }
         
         
