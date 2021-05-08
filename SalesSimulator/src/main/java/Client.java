@@ -87,6 +87,7 @@ public class Client {
         System.out.println("1 - Show all transactions");
         System.out.println("2 - Show transactions for a company");
         System.out.println("3 - Show details for a company");
+        System.out.println("4 - Exit program");
         
         // read answer
         Scanner s1 = new Scanner(System.in);
@@ -96,6 +97,7 @@ public class Client {
             
             // call method to read all transactions from file
             data.readTransactions();
+            displayUserMenu();
             
         
         } else if(choice.equals("2")) {
@@ -113,13 +115,16 @@ public class Client {
             
                 // call method to read transactions for company A
                 data.readTransactionsForCompany("A");
+                displayUserMenu();
 
             } else if (choice2.equals("2")) {
                 // call method to read transactions for company B
                 data.readTransactionsForCompany("B");
+                displayUserMenu();
             } else if (choice2.equals("3")) {
                 // call method to read transactions for company C
                 data.readTransactionsForCompany("C");
+                displayUserMenu();
             } else {
                 System.out.println("Please enter only numbers 1, 2 or 3.");
             }
@@ -138,16 +143,21 @@ public class Client {
             
                 // call method to read details for company A
                 data.readDetailsForCompany("A");
+                displayUserMenu();
 
             } else if (choice2.equals("2")) {
                 // call method to read details for company B
                 data.readDetailsForCompany("B");
+                displayUserMenu();
             } else if (choice2.equals("3")) {
                 // call method to read details for company C
                 data.readDetailsForCompany("C");
+                displayUserMenu();
             } else {
                 System.out.println("Please enter only numbers 1, 2 or 3.");
             }
+        } else if(choice.equals("4")) {
+            System.exit(0);
         }
         
     }

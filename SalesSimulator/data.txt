@@ -1,9 +1,9 @@
-Depot{company=A, depotNumber=0, nativeProductStock=20, externalProductStock1=23, externalProductStock2=30, productPrice=9, deliveryPrice=10, budget=79}
-Depot{company=A, depotNumber=1, nativeProductStock=34, externalProductStock1=8, externalProductStock2=40, productPrice=7, deliveryPrice=6, budget=53}
-Depot{company=B, depotNumber=0, nativeProductStock=40, externalProductStock1=30, externalProductStock2=14, productPrice=1, deliveryPrice=8, budget=74}
-Depot{company=B, depotNumber=1, nativeProductStock=18, externalProductStock1=3, externalProductStock2=37, productPrice=7, deliveryPrice=10, budget=51}
-Depot{company=C, depotNumber=0, nativeProductStock=18, externalProductStock1=11, externalProductStock2=27, productPrice=9, deliveryPrice=2, budget=63}
-Depot{company=C, depotNumber=1, nativeProductStock=28, externalProductStock1=34, externalProductStock2=23, productPrice=10, deliveryPrice=6, budget=53}
+Depot{company=A, depotNumber=0, nativeProductStock=35, externalProductStock1=37, externalProductStock2=30, productPrice=1, deliveryPrice=10, budget=66}
+Depot{company=A, depotNumber=1, nativeProductStock=25, externalProductStock1=38, externalProductStock2=23, productPrice=6, deliveryPrice=5, budget=55}
+Depot{company=B, depotNumber=0, nativeProductStock=31, externalProductStock1=21, externalProductStock2=25, productPrice=3, deliveryPrice=7, budget=62}
+Depot{company=B, depotNumber=1, nativeProductStock=24, externalProductStock1=13, externalProductStock2=8, productPrice=10, deliveryPrice=10, budget=78}
+Depot{company=C, depotNumber=0, nativeProductStock=38, externalProductStock1=36, externalProductStock2=22, productPrice=3, deliveryPrice=5, budget=85}
+Depot{company=C, depotNumber=1, nativeProductStock=39, externalProductStock1=7, externalProductStock2=30, productPrice=4, deliveryPrice=8, budget=71}
 Depot A0 bought from Depot B0
 Depot A0 bought from Depot B1
 Depot A1 bought from Depot B0
@@ -11,7 +11,6 @@ Depot A1 bought from Depot B1
 Depot A0 bought from Depot C0
 Depot A0 bought from Depot C1
 Depot A1 bought from Depot C0
-Depot A1 bought from Depot C1
 Depot B0 bought from Depot C0
 Depot B0 bought from Depot C1
 Depot B1 bought from Depot C0
