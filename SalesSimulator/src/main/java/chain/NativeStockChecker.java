@@ -20,9 +20,9 @@ public class NativeStockChecker implements TransactionLink {
            // next link will check native depot from seller
            nextLink.checker(buyerDepot, sellerDepot);       
         }
-        else {
-            System.out.println("Not enough Native Stock on Seller. Purchased not authorized.");
-        }
+//        else {
+//            //System.out.println("Not enough Native Stock on Seller. Purchased not authorized.");
+//        }
         
         
     }

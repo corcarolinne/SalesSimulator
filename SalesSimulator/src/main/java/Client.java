@@ -14,12 +14,12 @@ import java.util.Scanner;
 
 public class Client {
 
-    private static TransactionLink t1 = new ExternalStockChecker();;
+    private static TransactionLink t1 = new ExternalStockChecker();
     
     public static void main(String[] args) {
         
         FileAccess data = FileAccess.getInstance();
-   
+        
         // creating depot list for Company A
         Depot[] depotsFromA = new Depot[2];
         depotsFromA = populateDepots(depotsFromA, "A");
@@ -33,7 +33,7 @@ public class Client {
         depotsFromC = populateDepots(depotsFromC, "C");
         
         // calling methods to write and read file
-        data.writeFile(depotsFromA, depotsFromB, depotsFromC);
+        data.writeDepots(depotsFromA, depotsFromB, depotsFromC);
         //data.readFile();
         
         // initializing the chain of responsability
@@ -49,6 +49,7 @@ public class Client {
         makeTransactions(depotsFromA, depotsFromB);
         makeTransactions(depotsFromA, depotsFromC);
         makeTransactions(depotsFromB, depotsFromC);
+        
         
     }
     

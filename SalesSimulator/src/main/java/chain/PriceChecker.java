@@ -6,6 +6,7 @@ import depots.Depot;
 import depots.DepotA;
 import depots.DepotB;
 import depots.DepotC;
+import singleton.FileAccess;
 
 public class PriceChecker implements TransactionLink {
 
@@ -34,15 +35,22 @@ public class PriceChecker implements TransactionLink {
             // subtracting native product stock from seller's stock
             sellerDepot.setNativeProductStock(sellerDepot.getNativeProductStock() - 1);
             
-            // printing
+            // writing on file
             String buyer = "Depot " + buyerDepot.getCompany() + buyerDepot.getDepotNumber();
             String seller = "Depot " +  sellerDepot.getCompany() + sellerDepot.getDepotNumber();
-            System.out.println(buyer + " bought from " + seller);
+            
+            FileAccess data = FileAccess.getInstance();
+            
+            // to test
+            //System.out.println(buyer + " bought from " + seller);
+            
+            // calling methods to write transactions on file
+            data.writeTransactions(buyer + " bought from " + seller);
 
         // if budget is not enough
         } else {
-            System.out.println("purchased NOT authorized");
-        }
+            //"purchased NOT authorized";
+        }   
             
     }
 
