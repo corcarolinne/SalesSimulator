@@ -7,7 +7,8 @@ public class DepotA extends Depot {
     
     Random rand = new Random();
 
-    public DepotA(int depotNumber) {
+    public DepotA(String company, int depotNumber) {
+        this.company = company;
         this.depotNumber = depotNumber;
         this.nativeProductStock = rand.nextInt(51-15) + 15;
         this.externalProductStock1 = rand.nextInt(41-3) + 3;
@@ -19,9 +20,8 @@ public class DepotA extends Depot {
     
     // methods implemented to be used only in this depot
  
-     @Override
+    @Override
     public String toString() {
-        return "Company A: {" + "depot " + depotNumber + ", nativeProductStock=" + nativeProductStock + ", externalProductStock1=" + externalProductStock1 + ", externalProductStock2=" + externalProductStock2 + ", productPrice=" + productPrice + ", deliveryPrice=" + deliveryPrice + ", budget=" + budget + '}';
+        return "Depot{" + "company=" + company + ", depotNumber=" + depotNumber + ", nativeProductStock=" + nativeProductStock + ", externalProductStock1=" + externalProductStock1 + ", externalProductStock2=" + externalProductStock2 + ", productPrice=" + productPrice + ", deliveryPrice=" + deliveryPrice + ", budget=" + budget + '}';
     }
-
 }

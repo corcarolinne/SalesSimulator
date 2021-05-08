@@ -1,7 +1,7 @@
 
 import depots.Depot;
 
-public class SellerChecker implements TransactionLink {
+public class NativeStockChecker implements TransactionLink {
 
     TransactionLink nextLink;
    
@@ -18,7 +18,7 @@ public class SellerChecker implements TransactionLink {
                 System.out.println("native stock validated");
                 // set next link to receive same depot
                 // next link will check native depot from seller
-                //nextLink.checker(buyerDepot);       
+                nextLink.checker(buyerDepot, sellerDepot);       
              }
              else {
                  System.out.println("invalid nat stock");
@@ -28,4 +28,3 @@ public class SellerChecker implements TransactionLink {
     }
      
 }
-

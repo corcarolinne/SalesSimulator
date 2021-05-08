@@ -11,13 +11,13 @@ import depots.DepotC;
 public class DepotFactory {
 
     // this method will receive the properties of the depot and return the depot according to it
-    public static Depot getDepot(int numberOfDepot, String company) {
+    public static Depot getDepot(String company, int numberOfDepot) {
         if (company.equals("A")) {
-            return new DepotA(numberOfDepot);
+            return new DepotA(company, numberOfDepot);
         } else if (company.equals("B")) {
-            return new DepotB(numberOfDepot);
+            return new DepotB(company, numberOfDepot);
         } else if (company.equals("C")) {
-            return new DepotC(numberOfDepot);
+            return new DepotC(company, numberOfDepot);
         } else {
             return null;
         }

@@ -7,6 +7,7 @@ import factory.DepotFactory;
 public abstract class Depot {
     
     // commom attributes for all depots
+    String company;
     int depotNumber;
     int nativeProductStock;
     int externalProductStock1;
@@ -15,8 +16,17 @@ public abstract class Depot {
     int deliveryPrice;
     int budget;
     
+    
     // commom methods for all depots
-    public int getDepotNumber() {    
+    public String getCompany() {    
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;    
+    }
+
+    public int getDepotNumber() {
         return depotNumber;
     }
 
@@ -70,5 +80,5 @@ public abstract class Depot {
 
     public void setBudget(int budget) {
         this.budget = budget;
-    }    
+    }     
 }

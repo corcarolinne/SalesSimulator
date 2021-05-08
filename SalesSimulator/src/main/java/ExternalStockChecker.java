@@ -1,7 +1,6 @@
-
 import depots.Depot;
 
-public class BuyerChecker implements TransactionLink {
+public class ExternalStockChecker implements TransactionLink {
 
     TransactionLink nextLink;
    
@@ -28,4 +27,3 @@ public class BuyerChecker implements TransactionLink {
     }
      
 }
-

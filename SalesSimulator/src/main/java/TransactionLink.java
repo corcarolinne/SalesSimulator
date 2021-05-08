@@ -1,5 +1,8 @@
 
 import depots.Depot;
+import depots.DepotA;
+import depots.DepotB;
+import depots.DepotC;
 
 
 public interface TransactionLink {
@@ -7,4 +10,5 @@ public interface TransactionLink {
     // methods
     void setNextLink(TransactionLink nextLink);
     void checker(Depot[] buyerDepots, Depot[] sellerDepots);
+    
 }
