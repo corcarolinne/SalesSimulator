@@ -37,14 +37,21 @@ public class Client {
         t2.setNextLink(t3);
         //t3.setNextLink(t2);
         
-        // starting chain
-        t1.checker(depotsFromA, depotsFromB);
         
         
+        
+        // looping thru buyerDepots
+        for(int i=0; i < depotsFromA.length; i++) {
+          
+            // looping thru seller depot
+            for(int j=0; j < depotsFromB.length; j++) {
+                // starting chain
+                t1.checker(depotsFromA[i], depotsFromB[j]);
+            }
+        }
+    }
     
-     }
-     
-     private static Depot[] populateDepots(Depot[] depots, String companyName) {
+    private static Depot[] populateDepots(Depot[] depots, String companyName) {
         
         for(int i=0; i < depots.length; i++) {
              depots[i] = DepotFactory.getDepot(companyName, i);      

@@ -9,6 +9,6 @@ public interface TransactionLink {
     
     // methods
     void setNextLink(TransactionLink nextLink);
-    void checker(Depot[] buyerDepots, Depot[] sellerDepots);
+    void checker(Depot buyerDepot, Depot sellerDepot);
     
 }

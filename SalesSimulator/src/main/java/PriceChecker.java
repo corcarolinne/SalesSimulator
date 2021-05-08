@@ -14,35 +14,27 @@ public class PriceChecker implements TransactionLink {
     }
 
     @Override
-    public void checker(Depot[] buyerDepot, Depot[] sellerDepot) {
+    public void checker(Depot buyerDepot, Depot sellerDepot) {
         
-        // looping thru buyer depot
-        for(int i=0; i < buyerDepot.length; i++) {
-            
-            // looping thru seller depot
-            for(int j=0; j < sellerDepot.length; j++) {
-                // saving total cost
-                int totalCost = sellerDepot[j].getProductPrice() + sellerDepot[j].getDeliveryPrice();
-            
-                // comparing cost and budget
-                if(totalCost <= buyerDepot[i].getBudget()){
+        // saving total cost
+        int totalCost = sellerDepot.getProductPrice() + sellerDepot.getDeliveryPrice();
 
-                // printing
-                String buyer = "Company:A: Depot:" + buyerDepot[i].getDepotNumber();
-                String seller = "Company:B Depot:" + sellerDepot[j].getDepotNumber();
-                System.out.println(buyer + " bought from " + seller);
-          
-                // go to next link
-                //nextLink.checker(buyerDepot, sellerDepot);
-                
-                // if budget is not enough
-                } else {
-                    System.out.println("purchased NOT authorized");
-                }
-            
-            }
-               
+        // comparing cost and budget
+        if(totalCost <= buyerDepot.getBudget()){
+
+        // printing
+        String buyer = "Company:A: Depot:" + buyerDepot.getDepotNumber();
+        String seller = "Company:B Depot:" + sellerDepot.getDepotNumber();
+        System.out.println(buyer + " bought from " + seller);
+
+        // go to next link
+        //nextLink.checker(buyerDepot, sellerDepot);
+
+        // if budget is not enough
+        } else {
+            System.out.println("purchased NOT authorized");
         }
+            
     }
 
 }
