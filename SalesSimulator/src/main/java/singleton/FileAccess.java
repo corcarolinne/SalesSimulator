@@ -70,14 +70,27 @@ public class FileAccess {
          
     }
     
-    public void readFile() {
+    public void readTransactions() {
         try {
           File myObj = new File("data.txt");
           Scanner myReader = new Scanner(myObj);
+          
+          // loop through whole file while there's a line
           while (myReader.hasNextLine()) {
             String data = myReader.nextLine();
-            System.out.println(data);
+            if(data.contains("bought")) {
+                System.out.println(data);       
+            }
+            
           }
+          
+//          // loop only thru lines of transactions
+//          for(int i = 6; i < ; ++i) {
+//            String data = myReader.nextLine();
+//            System.out.println(data);
+//          }
+            
+//          
           myReader.close();
         } catch (FileNotFoundException e) {
           System.out.println("An error occurred.");

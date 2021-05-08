@@ -33,9 +33,9 @@ public class Client {
         Depot[] depotsFromC = new Depot[2];
         depotsFromC = populateDepots(depotsFromC, "C");
         
-        // calling methods to write and read file
+        // calling method to write depot details in file
         data.writeDepots(depotsFromA, depotsFromB, depotsFromC);
-        //data.readFile();
+        
         
         // initializing the chain of responsability
         //TransactionLink t1 = new ExternalStockChecker();
@@ -95,7 +95,7 @@ public class Client {
         if(choice.equals("1")) {
             
             // call method to read all transactions from file
-            
+            data.readTransactions();
             
         
         } else if(choice.equals("2")) {
