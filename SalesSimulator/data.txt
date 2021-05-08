@@ -1,17 +1,16 @@
-Depot{company=A, depotNumber=0, nativeProductStock=39, externalProductStock1=10, externalProductStock2=40, productPrice=10, deliveryPrice=6, budget=82}
-Depot{company=A, depotNumber=1, nativeProductStock=38, externalProductStock1=37, externalProductStock2=18, productPrice=4, deliveryPrice=5, budget=69}
-Depot{company=B, depotNumber=0, nativeProductStock=23, externalProductStock1=40, externalProductStock2=6, productPrice=5, deliveryPrice=2, budget=96}
-Depot{company=B, depotNumber=1, nativeProductStock=30, externalProductStock1=14, externalProductStock2=20, productPrice=6, deliveryPrice=5, budget=93}
-Depot{company=C, depotNumber=0, nativeProductStock=23, externalProductStock1=36, externalProductStock2=14, productPrice=9, deliveryPrice=4, budget=81}
-Depot{company=C, depotNumber=1, nativeProductStock=32, externalProductStock1=16, externalProductStock2=23, productPrice=10, deliveryPrice=3, budget=89}
+Depot{company=A, depotNumber=0, nativeProductStock=31, externalProductStock1=39, externalProductStock2=35, productPrice=3, deliveryPrice=9, budget=51}
+Depot{company=A, depotNumber=1, nativeProductStock=22, externalProductStock1=10, externalProductStock2=25, productPrice=9, deliveryPrice=3, budget=59}
+Depot{company=B, depotNumber=0, nativeProductStock=16, externalProductStock1=8, externalProductStock2=38, productPrice=2, deliveryPrice=5, budget=88}
+Depot{company=B, depotNumber=1, nativeProductStock=43, externalProductStock1=22, externalProductStock2=17, productPrice=4, deliveryPrice=7, budget=75}
+Depot{company=C, depotNumber=0, nativeProductStock=24, externalProductStock1=29, externalProductStock2=20, productPrice=3, deliveryPrice=8, budget=64}
+Depot{company=C, depotNumber=1, nativeProductStock=41, externalProductStock1=6, externalProductStock2=29, productPrice=10, deliveryPrice=5, budget=84}
 Depot A0 bought from Depot B0
 Depot A0 bought from Depot B1
 Depot A1 bought from Depot B0
 Depot A1 bought from Depot B1
-Depot A0 bought from Depot C0
-Depot A0 bought from Depot C1
 Depot A1 bought from Depot C0
 Depot A1 bought from Depot C1
 Depot B0 bought from Depot C0
+Depot B0 bought from Depot C1
 Depot B1 bought from Depot C0
 Depot B1 bought from Depot C1

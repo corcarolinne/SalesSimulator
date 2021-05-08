@@ -15,10 +15,11 @@ import java.util.Scanner;
 public class Client {
 
     private static TransactionLink t1 = new ExternalStockChecker();
+    private static FileAccess data = FileAccess.getInstance();
     
     public static void main(String[] args) {
         
-        FileAccess data = FileAccess.getInstance();
+        //FileAccess data = FileAccess.getInstance();
         
         // creating depot list for Company A
         Depot[] depotsFromA = new Depot[2];
@@ -50,6 +51,9 @@ public class Client {
         makeTransactions(depotsFromA, depotsFromC);
         makeTransactions(depotsFromB, depotsFromC);
         
+        // display user menu
+        displayUserMenu();
+        
         
     }
     
@@ -73,8 +77,54 @@ public class Client {
                 // initializing the chain of responsability
                 t1.checker(buyersDepots[i], sellerDepots[j]);
             }
+        }    
+    }
+    
+    private static void displayUserMenu() {
+
+        // show menu
+        System.out.println("Please select an action:");
+        System.out.println("1 - Show all transactions");
+        System.out.println("2 - Show transactions for a company");
+        System.out.println("3 - Show details for a company");
+        
+        // read answer
+        Scanner s1 = new Scanner(System.in);
+        String choice = s1.nextLine();
+        
+        if(choice.equals("1")) {
+            
+            // call method to read all transactions from file
+            
+            
+        
+        } else if(choice.equals("2")) {
+            
+            // display second menu
+            System.out.println("1 - Show Transactions for Company A");
+            System.out.println("2 - Show Transactions for Company B");
+            System.out.println("3 - Show Transactions for Company C");
+            
+            // read answer
+            Scanner s2 = new Scanner(System.in);
+            String choice2 = s2.nextLine();
+            
+            if(choice2.equals("1")) {
+            
+                // call method to read transactions for company A
+
+            } else if (choice2.equals("2")) {
+                // call method to read transactions for company B
+            } else if (choice2.equals("3")) {
+                // call method to read transactions for company C
+            } else {
+                System.out.println("Please enter ");
+            }
+            
+        } else if(choice.equals("3")) {
+            // basically same as above
         }
-         
+        
     }
     
 }
